@@ -9,7 +9,7 @@
 #include <SoftwareSerial.h> // Library for using serial communication
 SoftwareSerial SIM900(7, 8); // RX, TX
 
-#define MainPhoneNumber = 99935997;
+#define MainPhoneNumber = //add phone here;
 String data[5];
 
 //GPS Strings to get the location
@@ -206,7 +206,7 @@ void send_message(String message)
 {
   SIM900.println("AT+CMGF=1");    //Set the GSM Module in Text Mode
   delay(100);  
-  SIM900.println("AT+CMGS=\"99935997\""); // Replace it with your mobile number
+  SIM900.println("AT+CMGS=\"add phone here\""); // Replace it with your mobile number
   delay(100);
   SIM900.println(message);   // The SMS text you want to send
   delay(100);
